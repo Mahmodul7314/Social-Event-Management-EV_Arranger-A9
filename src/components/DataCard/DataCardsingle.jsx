@@ -1,10 +1,11 @@
 /* eslint-disable react/no-unknown-property */
 /* eslint-disable react/prop-types */
 import { BsCurrencyDollar } from "react-icons/bs";
+import { NavLink } from "react-router-dom";
 
 
 const DataCardsingle = ({cardData}) => {
- const {image,title,description,price} = cardData || {}
+ const {image,title,description,price,id} = cardData || {}
     return (
         <div>
             <div className="mt-10 ">
@@ -21,21 +22,21 @@ const DataCardsingle = ({cardData}) => {
      {title}
     </h5>
 
-    <p className="block font-extrabold font-sans text-base font-light leading-relaxed text-inherit antialiased">
-   {description.length>200? description.slice(0,160):{description}}
+    <p className="block font-normal leading-relaxed text-inherit antialiased">
+   {description.length>200? description.slice(0,160):{description}}.....
 
     
     </p>
-    <p className="pt-8 pb-4 text-sm flex items-center"><BsCurrencyDollar></BsCurrencyDollar>Price: {price}</p>
+    <p className="pt-6 pb-4 text-lg flex items-center">Price: {price} <BsCurrencyDollar></BsCurrencyDollar></p>
   </div>
   <div className="p-6 pt-0">
-    <button
+    <NavLink to={`/dataCard/${id}`}
       className="select-none rounded-lg bg-red-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
       type="button"
       data-ripple-light="true"
     >
       View Details
-    </button>
+    </NavLink>
   </div>
 </div>
 </div>
