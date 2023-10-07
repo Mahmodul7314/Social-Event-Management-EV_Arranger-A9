@@ -9,8 +9,8 @@ const DataCardsingle = ({cardData}) => {
     return (
         <div>
             <div className="mt-10 ">
-            <div className=" mb-6 relative flex w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
-  <div className="relative mx-4 -mt-6 h-56 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40">
+            <div className=" mb-6 relative flex lg:w-96 md:w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+  <div className="relative mx-4 mt-6 h-56 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40">
     <img
       src={image}
       alt="img-blur-shadow"

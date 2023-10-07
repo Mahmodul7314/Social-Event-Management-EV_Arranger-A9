@@ -3,7 +3,7 @@
 const Img = () => {
     return (
         <div>
-            <div className="border-2  mb-6 mt-8 grid md:grid-cols-4 grid-cols-1 p-4 rounded-xl">
+            <div className="border-2  mb-6 mt-8 grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 p-4 rounded-xl">
                 <img className="w-96 h-80 " src="https://i.ibb.co/p3YYRXm/audience-1853662-1280.jpg alt=" />
                 <img className="w-96 h-80" src="https://i.ibb.co/4tBBJDr/wedding-1846114-1280.jpg alt=" />
                 <img className="w-96 h-80" src="https://i.ibb.co/cr1C10N/men-1854191-1280.jpg alt=" />
