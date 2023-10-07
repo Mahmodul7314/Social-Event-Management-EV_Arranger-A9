@@ -30,7 +30,8 @@ const router = createBrowserRouter([
       },
       {
         path:'/dataCard/:id',
-        element:<CardDetails></CardDetails>
+        element:<CardDetails></CardDetails>,
+        loader:()=> fetch('/data.json')
       }
     ]
   },

@@ -1,10 +1,25 @@
+import { useEffect, useState } from "react";
+import { useLoaderData, useParams } from "react-router-dom";
+import CardDetail from "./CardDetail";
 
 
 const CardDetails = () => {
 
+    const allData = useLoaderData();
+    const {id} = useParams();
+    const idNum = parseInt(id);
+ 
+    const [dataCard,setDataCard] = useState();
+    useEffect(()=>{
+        const FindMatchData = allData.find(data=> data.id === idNum);
+        setDataCard(FindMatchData);
+   
+    },[])
+
+
     return (
         <div>
-            <h2 className="text-2xl">card details</h2>
+            <CardDetail CardDetail={dataCard}></CardDetail>
         </div>
     );
 };
