@@ -1,33 +1,54 @@
+/* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
-import { useContext } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { useContext, useRef, useState } from "react";
+import { Link, NavLink, Navigate, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../components/AuthProvider/AuthProvider";
+import swal from "sweetalert";
 
+//toast
 
 
 const Login = () => {
 
-const {signIn}= useContext(AuthContext)
+const {signIn,  signinwithGoogle}= useContext(AuthContext)
+const navigate = useNavigate();
+const [errorMessage, setErrorMessage] = useState('');
+
+
 const handleLogin =e=>{
 e.preventDefault();
 const form = new FormData(e.currentTarget);
 const email = form.get('email');
 const password = form.get('password');
 
+setErrorMessage('');
+
 //Sign In
  signIn(email,password)
   .then(result=>{
-    console.log(result.user)
+    swal( "Login Successful!");
+    e.target.reset();
+    navigate('/')
+   
   })
   .catch(error=>{
     console.error(error)
+    setErrorMessage(error.message)
   })
   
+}
+
+const handleGoogleSignIn=()=>{
+  signinwithGoogle()
+  .then(result=>{
+    console.log(result.user)
+  })
+  .catch(error=> console.error(error))
 }
     return (
         <div>
             <div className="hero min-h-screen bg-base-200">
-  <div className="hero-content flex-col ">
+  <div className="hero-content flex-col w-1/3">
     <div className="text-center lg:text-left">
       <h1 className="text-5xl mb-4 font-bold">Login now!</h1>
      
@@ -54,11 +75,15 @@ const password = form.get('password');
         </div>
         
       </form>
-      <p className="px-4 pb-8 text-center">New Here ? Please <Link className="text-bold text-blue-600" to="/register">Register</Link></p>
+      {
+             <p className="text-lg pb-3 text-center font-bold text-red-500">{errorMessage}</p>
+      }
+      <p className="px-4 pb-6 text-center">New Here ? Please <Link className="font-bold text-blue-600" to="/register">Register</Link></p>
+      <p className="text-center pb-4"> Sign In With <button onClick={handleGoogleSignIn} className=" text-blue-500 font-bold">Google</button></p>
     </div>
-  </div>
+  </div> 
            </div>
-            
+       
         </div>
     );
 };

@@ -55,12 +55,18 @@ const Navbar = () => {
 </NavLink>
 
  </ul> 
+    
        <div className="w-1/2 flex justify-end pr-6" >
-      {user? <>     
-           <button className="btn" onClick={handleLogOut} >
+      {user? <> 
+             <div className="flex items-center gap-2 pr-6">
+             <p className="text-sm font-bold">Name: {user.displayName}<br /></p>
+              <div ><img className="w-12 h-12 rounded-full" src={user.photoURL} alt="" /></div>
+             </div>
+             
+           <button className="btn btn-error text-black font-extrabold hover:text-black hover:bg-red-500" onClick={handleLogOut} >
            <div
             className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "active text-red-500 font-extrabold px-4 py-4" : "font-extrabold"
+            isPending ? "pending" : isActive ? "active text-red-500 font-extrabold px-4 py-4" : " text-black font-extrabold"
            }
           >
            LogOut
@@ -68,7 +74,7 @@ const Navbar = () => {
            </button>
       </>
       :
-      <button className="btn">
+      <button className="btn btn-neutral">
       <NavLink
        to="/login"
        className={({ isActive, isPending }) =>

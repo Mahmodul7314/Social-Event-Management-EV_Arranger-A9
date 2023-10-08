@@ -1,13 +1,18 @@
 /* eslint-disable no-unused-vars */
 import { getAuth } from "firebase/auth";
-import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import swal from "sweetalert";
+
 
 
 const Register = () => {
 
+
     const { createUser} = useContext(AuthContext)
+    const [errorMessage, setErrorMessage] = useState('');
+    const navigate =useNavigate();
 
     const handleRegister =e=>{
 
@@ -17,31 +22,41 @@ const Register = () => {
         const image = form.get('image');
         const email = form.get('email');
         const password = form.get('password');
-
-        console.log(name,image,email,password)
-      
+       setErrorMessage('');
+      if(password.length<6){
+        setErrorMessage("password will be at least 6 character")
+        return;
+      }else if(!/[A-Z]/.test(password)){
+        setErrorMessage('Password must be have one Capital Letter')
+        return;
+      }else if (!/[#_]/.test(password)){
+        setErrorMessage('Password must be have #_')
+        return;
+      }
         //Create User
         createUser(email, password)
         .then(result =>{
-            console.log(result.user)
+          swal( "Register Successful!","Thank You");
+          e.target.reset();
+         navigate('/');
+         
         })
         .catch(error =>{
             console.error(error)
         })
-
+          
     
-
         }
         
     return (
         <div>
-               <div className="hero min-h-screen bg-base-200">
-  <div className="hero-content flex-col ">
+               <div className="hero min-h-screen bg-slate-50">
+  <div className="hero-content flex-col w-2/5">
     <div className="text-center lg:text-left">
       <h1 className="text-5xl mb-4 font-bold">Register now!</h1>
      
     </div>
-    <div className="card flex-shrink-0 w-full  max-w-sm shadow-2xl bg-base-100">
+    <div className="card flex-shrink-0 w-full  shadow-2xl bg-base-100">
       <form onSubmit={handleRegister} className="card-body">
         <div className="form-control">
           <label className="label">
@@ -75,6 +90,9 @@ const Register = () => {
         </div>
         
       </form>
+     {
+      <p className="text-lg pb-3 text-center font-bold text-red-500">{errorMessage}</p>
+     }
       <p className="px-4 pb-8 text-center">Have You Account ? Please <Link className="text-bold text-blue-600" to="/login">Login</Link></p>
     </div>
   </div>

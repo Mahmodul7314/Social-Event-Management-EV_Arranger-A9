@@ -7,6 +7,7 @@ import Contact from "../Pages/Contact/Contact";
 import CardDetails from "../components/DataCard/CardDetails";
 import Login from "../Pages/Login/Login";
 import Register from "../components/Register/Register";
+import PrivateRoute from "../components/PrivateRoute/PrivateRoute";
 
 
 
@@ -24,15 +25,15 @@ const router = createBrowserRouter([
       },
       {
         path:'/about',
-        element:<About></About>
+        element:<PrivateRoute><About></About></PrivateRoute>
       },
       {
         path:'/contact',
-        element:<Contact></Contact>
+        element:<PrivateRoute><Contact></Contact></PrivateRoute>
       },
       {
         path:'/dataCard/:id',
-        element:<CardDetails></CardDetails>,
+        element:<PrivateRoute><CardDetails></CardDetails></PrivateRoute>,
         loader:()=> fetch('/data.json')
       },
       {

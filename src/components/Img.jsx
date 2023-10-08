@@ -9,7 +9,7 @@ const Img = () => {
                 <img className="w-96 h-80" src="https://i.ibb.co/cr1C10N/men-1854191-1280.jpg alt=" />
                 <img className="w-96 h-80" src="https://i.ibb.co/qmNLtqt/kuwait-252613-1280.jpg alt=" />
                
-                <img className="w-96 h-80" src="https://i.ibb.co/TT88Tm4/birthday-947438-1280.jpg alt=" />
+                <img className="w-96 h-80" src="https://i.ibb.co/K2qypb9/DSC03121-min.jpgalt=" />
                 <img className="w-96 h-80" src="https://i.ibb.co/n7k0p7t/birthday-1114056-1280.jpg alt=" />
                 <img className="w-96 h-80" src="https://i.ibb.co/qmNLtqt/kuwait-252613-1280.jpg alt=" />
                 <img className="w-96 h-80" src="https://i.ibb.co/3YZjRY8/christmas-market-4705885-1280.jpgalt=" />
