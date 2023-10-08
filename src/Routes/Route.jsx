@@ -5,6 +5,8 @@ import Home from "../Pages/Home/Home";
 import About from "../Pages/About/About";
 import Contact from "../Pages/Contact/Contact";
 import CardDetails from "../components/DataCard/CardDetails";
+import Login from "../Pages/Login/Login";
+import Register from "../components/Register/Register";
 
 
 
@@ -32,6 +34,14 @@ const router = createBrowserRouter([
         path:'/dataCard/:id',
         element:<CardDetails></CardDetails>,
         loader:()=> fetch('/data.json')
+      },
+      {
+        path:'/login',
+        element:<Login></Login>
+      },
+      {
+        path:'/register',
+        element:<Register></Register>
       }
     ]
   },

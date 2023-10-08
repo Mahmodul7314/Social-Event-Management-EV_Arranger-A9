@@ -1,7 +1,20 @@
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 
 
 const Navbar = () => {
+
+  const {user,logOut} = useContext(AuthContext);
+
+  const handleLogOut =()=>{
+    logOut()
+    .then(()=>console.log('LogOut Successfull'))
+    .catch(error=>console.error(error))
+  }
+
+
+
     return (
         <div className="border py-6 bg-gray-200 flex items-center">
            <h2 className="lg:text-4xl md:text-3xl text-xl  lg:font-extrabold font-bold lg:px-6 px-2 pr-4 md:pr-10 lg:pr-20"><span className="text-red-500">EV</span> Arranger</h2>
@@ -32,9 +45,44 @@ const Navbar = () => {
  Contact
 </NavLink>
 
+   <NavLink 
+  to="/register"
+  className={({ isActive, isPending }) =>
+    isPending ? "pending" : isActive ? "active text-red-500 font-bold px-4 py-4" : ""
+  }
+>
+ Register
+</NavLink>
 
-           </ul>     
-        </div>
+ </ul> 
+       <div className="w-1/2 flex justify-end pr-6" >
+      {user? <>     
+           <button className="btn" onClick={handleLogOut} >
+           <div
+            className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "active text-red-500 font-extrabold px-4 py-4" : "font-extrabold"
+           }
+          >
+           LogOut
+           </div>
+           </button>
+      </>
+      :
+      <button className="btn">
+      <NavLink
+       to="/login"
+       className={({ isActive, isPending }) =>
+       isPending ? "pending" : isActive ? "active text-red-500 font-extrabold px-4 py-4 pr-6" : "font-extrabold"
+      }
+     >
+      Login
+      </NavLink>
+      </button>
+         
+      }
+
+         </div>
+     </div>
     );
 };
 
