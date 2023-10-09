@@ -18,9 +18,9 @@ console.log(greetign);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer:   B `ReferenceError: greetign is not defined` ?
 
-<i>Write your explanation here</i>
+<i>gretting is variable name and it's has no value.greetign is another variable and its has object but object havent any value. Thats why its result will be ReferenceError: greeting is not defined</i>
 
 </p>
 </details>
@@ -43,9 +43,9 @@ sum(1, "2");
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: - C: `"12"`?
 
-<i>Write your explanation here</i>
+<i>Javascript is logical and functional language.thats why it will behave auto correction. Here sum function get 2 parameter. one of string "2" another 1 number. JavaScript will perform type coercion and convert the number 1 to a string in order to concatenate it with the string "2". The result of this concatenation is the string "12". So, the function returns "12".</i>
 
 </p>
 </details>
@@ -69,9 +69,11 @@ console.log(food);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: A: `['🍕', '🍫', '🥑', '🍔']` ?
 
-<i>Write your explanation here</i>
+<i>  have an array called food with four emoji elements. Then, you create an object info with a property favoriteFood that initially references the first element of the food array, which is "🍕".
+
+AFter, if change the info.favoriteFood property to "🍝", but this does not affect the food array. That why, when you console.log(food), it will output the original array, which is ['🍕', '🍫', '🥑', '🍔']. </i>
 
 </p>
 </details>
@@ -94,9 +96,9 @@ console.log(sayHi());
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: - B: `Hi there, undefined` ?
 
-<i>Write your explanation here</i>
+<i>Here, function sayHi axpect a parameter. when I call sayHi with console.log(sayHi()); but here value is not priovide then I get result its undefined. and sayHi function also return string text " Hi there," so the result is B.</i>
 
 </p>
 </details>
@@ -122,9 +124,9 @@ console.log(count);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer:- C: 3 ?
 
-<i>Write your explanation here</i>
+<i>num if nums array value is  number means truthy. then count value will be 1++  and it will contunue then we get result 3.</i>
 
 </p>
 </details>
