@@ -7,7 +7,7 @@ const CardDetail = ({CardDetail}) => {
     return (
         <div className="mt-6 mb-4">
             <div className="relative w-full flex-row rounded-xl bg-white bg-clip-border text-gray-700 ">
-  <div className="relative m-0 px-40 w-full mx-auto shrink-0 overflow-hidden rounded-xl rounded-r-none bg-white bg-clip-border text-gray-700">
+  <div className="relative m-0 lg:px-40 w-full mx-auto shrink-0 overflow-hidden rounded-xl lg:rounded-r-none  bg-white bg-clip-border text-gray-700">
     <img
       src={image}
       alt="image"

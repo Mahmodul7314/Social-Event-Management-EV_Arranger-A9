@@ -7,7 +7,7 @@ const Footer = () => {
         <div>
             <footer className="footer footer-center p-10 bg-gray-200  text-primary-content">
   <aside>
-  <h2 className="text-4xl text-black pl-16 font-extrabold px-6 pr-20"><span className="text-red-500">EV</span> Arranger</h2>
+  <h2 className="lg:text-4xl text-3xl text-black pl-16 lg:font-extrabold font-bold px-6 pr-6 lg:pr-20"><span className="text-red-500">EV</span> Arranger</h2>
     <p className="font-bold text-black opacity-80">
       EV Arranger Ltd. <br/>Providing reliable Event Services Since 1992
     </p> 
