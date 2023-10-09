@@ -46,7 +46,7 @@ const signIn =(email,password)=>{
     return signOut(auth);
   }
 
-  //signinwithGoogle
+  //signin
   const signinwithGoogle =() =>{
     setLoading(true)
  
@@ -67,7 +67,9 @@ const authInfo={
     logOut,
     signinwithGoogle,
     loading,
-  }
+  
+
+}
     return (
         <AuthContext.Provider value={authInfo}>
             {children}

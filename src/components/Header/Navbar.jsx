@@ -16,14 +16,17 @@ const Navbar = () => {
 
 
     return (
-        <div className="border py-6 bg-gray-200 flex items-center">
-           <h2 className="lg:text-4xl md:text-3xl text-xl  lg:font-extrabold font-bold lg:px-6 px-2 pr-4 md:pr-10 lg:pr-20"><span className="text-red-500">EV</span> Arranger</h2>
-      <ul className="flex justify-center items-center gap-2 lg:gap-6">  
-  
+        <div className="border py-6 pl-6  bg-gray-200 flex items-center">
+
+          <div className=" w-1/2 flex justify-between items-center">
+          <h2 className="lg:text-4xl md:text-3xl text-xl  lg:font-extrabold font-bold "><span className="text-red-500">EV</span> Arranger</h2>
+ 
+    
+  <ul className="" >
    <NavLink
   to="/"
   className={({ isActive, isPending }) =>
-    isPending ? "pending" : isActive ? "active text-red-500 font-bold px-4 py-4  " : ""
+    isPending ? "pending" : isActive ? "active text-red-500 font-bold px-4 py-4  " : "font-bold px-4 py-4 "
   }
 >
  Home
@@ -31,7 +34,7 @@ const Navbar = () => {
    <NavLink
   to="/about"
   className={({ isActive, isPending }) =>
-    isPending ? "pending" : isActive ? "active text-red-500 font-bold px-4 py-4" : ""
+    isPending ? "pending" : isActive ? "active text-red-500 font-bold px-4 py-4" : "font-bold px-4 py-4 "
   }
 >
  About
@@ -39,7 +42,7 @@ const Navbar = () => {
    <NavLink
   to="/contact"
   className={({ isActive, isPending }) =>
-    isPending ? "pending" : isActive ? "active text-red-500 font-bold px-4 py-4" : ""
+    isPending ? "pending" : isActive ? "active text-red-500 font-bold  px-4 py-4" : "font-bold px-4 py-4 "
   }
 >
  Contact
@@ -48,15 +51,15 @@ const Navbar = () => {
    <NavLink 
   to="/register"
   className={({ isActive, isPending }) =>
-    isPending ? "pending" : isActive ? "active text-red-500 font-bold px-4 py-4" : ""
+    isPending ? "pending" : isActive ? "active text-red-500 font-bold px-4 py-4" : "font-bold px-4 py-4 "
   }
 >
  Register
 </NavLink>
 
  </ul> 
-    
-       <div className="w-1/2 flex justify-end pr-6" >
+ </div>
+       <div className="w-1/2 flex justify-end pr-6 border-yellow-500" >
       {user? <> 
              <div className="flex items-center gap-2 pr-6">
              <p className="text-sm font-bold">Name: {user.displayName}<br /></p>
@@ -88,7 +91,8 @@ const Navbar = () => {
       }
 
          </div>
-     </div>
+         </div>
+    //  </div>
     );
 };
 

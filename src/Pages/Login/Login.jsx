@@ -23,7 +23,7 @@ const password = form.get('password');
 
 setErrorMessage('');
 
-//Sign In
+//Sign In with email and password
  signIn(email,password)
   .then(result=>{
     swal( "Login Successful!");
@@ -41,14 +41,18 @@ setErrorMessage('');
 const handleGoogleSignIn=()=>{
   signinwithGoogle()
   .then(result=>{
-    console.log(result.user)
+  
+    swal( "Sign In Successful!");
+    navigate('/')
+    e.target.reset();
+  
   })
   .catch(error=> console.error(error))
 }
     return (
         <div>
             <div className="hero min-h-screen bg-base-200">
-  <div className="hero-content flex-col w-1/3">
+  <div className="hero-content flex-col w-full lg:w-1/3">
     <div className="text-center lg:text-left">
       <h1 className="text-5xl mb-4 font-bold">Login now!</h1>
      
