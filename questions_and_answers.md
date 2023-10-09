@@ -114,7 +114,7 @@ nums.forEach((num) => {
 });
 
 console.log(count);
-```
+``
 
 - A: 1
 - B: 2
