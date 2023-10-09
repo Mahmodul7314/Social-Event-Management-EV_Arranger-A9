@@ -4,7 +4,7 @@
 
 Project Name : EV Arranger
 
-Live Site Link :
+Live Site Link :  https://social-event-management-23257.web.app/
 
 Project Features and Functionality of This Project:
 There are many more features and Functions but the Big Five features are below here;

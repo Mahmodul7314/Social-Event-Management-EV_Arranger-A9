@@ -124,7 +124,7 @@ console.log(count);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer:- C: 3 ?
+#### Answer: C: 3 ?
 
 <i>num if nums array value is  number means truthy. then count value will be 1++  and it will contunue then we get result 3.</i>
 
