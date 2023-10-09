@@ -19,10 +19,12 @@ const Register = () => {
         e.preventDefault();
         const form = new FormData(e.currentTarget);
         const name = form.get('name');
-        const image = form.get('image');
+        const photo = form.get('photo');
         const email = form.get('email');
         const password = form.get('password');
+
        setErrorMessage('');
+       //conditional password setup
       if(password.length<6){
         setErrorMessage("password will be at least 6 character")
         return;
@@ -68,7 +70,7 @@ const Register = () => {
           <label className="label">
             <span className="label-text">Image Url</span>
           </label>
-          <input type="text" name="image" placeholder="Your Image url" className="input input-bordered" required />
+          <input type="text" name="photo" placeholder="Your Image url" className="input input-bordered" required />
         </div>
         <div className="form-control">
           <label className="label">

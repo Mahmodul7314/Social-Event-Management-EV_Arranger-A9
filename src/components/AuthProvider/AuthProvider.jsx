@@ -16,13 +16,13 @@ const AuthProvider = ({children}) => {
 
     //Create User
 const createUser =(email,password)=>{
-    setLoading(true)
+       setLoading(true)
     return createUserWithEmailAndPassword(auth, email, password);
 }
 
 //Sign in
 const signIn =(email,password)=>{
-    setLoading(true)
+       setLoading(true)
     return signInWithEmailAndPassword(auth,email,password)
 
   }
@@ -53,7 +53,12 @@ const signIn =(email,password)=>{
     return signInWithPopup(auth,googleProvider)
 }
 
+// //update profile info
+// const updateProfile = (auth.currentUser,{
+//     displayName: "Jane Q. User", photoURL: "https://example.com/jane-q-user/profile.jpg"
 
+//   });
+  
 
 const authInfo={
     createUser,
@@ -61,7 +66,8 @@ const authInfo={
     user,
     logOut,
     signinwithGoogle,
-    loading
+    loading,
+    updateProfile
 
 }
     return (
