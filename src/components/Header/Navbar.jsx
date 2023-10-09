@@ -50,92 +50,11 @@ const Navbar = () => {
     >
      Register
     </NavLink></li>
-    
-
     </>
 
-      
+ return (
 
-    return (
-//         <div className="border py-6 pl-6  bg-gray-200 flex items-center">
-
-//           <div className=" w-1/2 flex justify-between items-center">
-//           <h2 className="lg:text-4xl md:text-3xl text-xl  lg:font-extrabold font-bold "><span className="text-red-500">EV</span> Arranger</h2>
- 
-    
-//   <ul className=" " >
-//    <NavLink
-//   to="/"
-//   className={({ isActive, isPending }) =>
-//     isPending ? "pending" : isActive ? "active text-red-500 font-normal lg:font-bold lg:px-4 p-2 lg:py-4  " : "font-normal lg:font-bold lg:px-4 p-2 lg:py-4 "
-//   }
-// >
-//  Home
-// </NavLink>
-//    <NavLink
-//   to="/about"
-//   className={({ isActive, isPending }) =>
-//     isPending ? "pending" : isActive ? "active text-red-500 font-normal lg:font-bold px-4 py-4" : "font-normal lg:font-bold px-4 py-4 "
-//   }
-// >
-//  About
-// </NavLink>
-//    <NavLink
-//   to="/contact"
-//   className={({ isActive, isPending }) =>
-//     isPending ? "pending" : isActive ? "active text-red-500 font-normal lg:font-bold  px-4 py-4" : "font-normal lg:font-bold px-4 py-4 "
-//   }
-// >
-//  Contact
-// </NavLink>
-
-//    <NavLink 
-//   to="/register"
-//   className={({ isActive, isPending }) =>
-//     isPending ? "pending" : isActive ? "active text-red-500 font-normal lg:font-bold px-4 py-4" : "font-normal lg:font-bold px-4 py-4 "
-//   }
-// >
-//  Register
-// </NavLink>
-
-//  </ul> 
-//  </div>
-//        <div className="w-1/2 lg:flex flex-col justify-end pr-6 border-yellow-500" >
-//       {user? <> 
-//              <div className="flex items-center gap-2 pr-6">
-//              <p className="text-sm lg:font-bold font-normal">Name: {user.displayName}<br /></p>
-//               <div ><img className="lg:w-12 w-6 h-6 lg:h-12 rounded-full" src={user.photoURL} alt="" /></div>
-//              </div>
-             
-//            <button className="btn btn-error text-black lg:font-extrabold font-bold hover:text-black hover:bg-red-500" onClick={handleLogOut} >
-//            <div
-//             className={({ isActive, isPending }) =>
-//             isPending ? "pending" : isActive ? "active text-red-500 font-extrabold px-4 py-4" : " text-black font-extrabold"
-//            }
-//           >
-//            LogOut
-//            </div>
-//            </button>
-//       </>
-//       :
-//       <button className="btn btn-neutral">
-//       <NavLink
-//        to="/login"
-//        className={({ isActive, isPending }) =>
-//        isPending ? "pending" : isActive ? "active text-red-500 font-extrabold px-4 py-4 pr-6" : "font-extrabold"
-//       }
-//      >
-//       Login
-//       </NavLink>
-//       </button>
-         
-//       }
-
-//          </div>
-//          </div>
-
-
-<div className="navbar bg-base-100">
+<div className="navbar bg-slate-200 lg:py-6">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className=" lg:hidden">
